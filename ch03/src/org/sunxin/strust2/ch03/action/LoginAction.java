@@ -14,6 +14,7 @@ public class LoginAction implements Action {
 	
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
+		
 		UserDao userDao = new UserDao();
 		if(userDao.getLogInfo(user.getUsername())!= null && user.getPassword().equals(userDao.getLogInfo(user.getUsername())))
 			return SUCCESS;
